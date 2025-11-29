@@ -109,3 +109,44 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- ABOUT PAGE STYLES --- */
+
+.about-content {
+    display: flex; /* Enables flexible layout */
+    gap: 40px; /* Space between the image and text */
+    align-items: flex-start; /* Aligns content to the top */
+    margin-top: 50px;
+}
+
+.profile-image {
+    /* Set a fixed size for the image container */
+    flex-shrink: 0; /* Prevents the image from shrinking on smaller screens */
+    width: 250px; 
+    border: 3px solid #333;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.profile-text {
+    /* Allows the text block to take up the remaining space */
+    flex-grow: 1; 
+}
+
+/* Mobile Responsiveness for About Page */
+@media (max-width: 768px) {
+    .about-content {
+        /* On small screens, stack the image on top of the text */
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .profile-image {
+        /* Center the image when stacked */
+        width: 60%;
+        margin: 0 auto;
+    }
+}
