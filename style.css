@@ -8,8 +8,8 @@ body, h1, h2, p, header, footer, section {
 /* 2. TYPOGRAPHY & COLORS - The vibe of the site */
 body {
     font-family: 'Georgia', 'Arial', sans-serif;
-    background-color: #000000  /* Soft Black background */
-    color: #ffffff      /* Off-white text */
+    background-color: #000000 !important /* Soft Black background */
+    color: #ffffff   !important   /* Off-white text */
     line-height: 1.6;
 }
 
