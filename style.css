@@ -62,6 +62,7 @@ footer {
     border-top: 1px solid #333;
     font-size: 0.8rem;
     color: #666;
+<<<<<<< HEAD
 }
 
 /* --- GALLERY GRID STYLES --- */
@@ -149,4 +150,6 @@ footer {
         width: 60%;
         margin: 0 auto;
     }
+=======
+>>>>>>> parent of 5fd0efd (3column and correct nesting)
 }
