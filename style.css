@@ -1,0 +1,64 @@
+/* 1. RESET - Removes default browser spacing */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. TYPOGRAPHY - The vibe of the site */
+body {
+    font-family: 'Georgia', serif; /* Good for reading poems */
+    background-color: #fdfdfd; /* Off-white is easier on the eyes */
+    color: #333; /* Dark grey, not pure black */
+    line-height: 1.6;
+}
+
+/* 3. LAYOUT - Centers the content */
+.container {
+    max-width: 700px; /* Keeps text lines from getting too long to read */
+    margin: 0 auto; /* Centers the box */
+    padding: 40px 20px;
+}
+
+/* 4. NAVIGATION - The Breadcrumbs */
+nav {
+    margin-bottom: 60px;
+    font-family: 'Helvetica', 'Arial', sans-serif; /* Contrast font for UI */
+    font-size: 0.9rem;
+    color: #888;
+}
+
+nav a {
+    text-decoration: none;
+    color: #888;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* 5. ART & POETRY STYLING */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.date {
+    font-style: italic;
+    color: #999;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+}
+
+.content-body p {
+    margin-bottom: 20px; /* Space between stanzas or paragraphs */
+}
+
+/* If you add images later */
+img {
+    max-width: 100%; /* Ensures images never overflow the screen */
+    height: auto;
+    display: block;
+}
