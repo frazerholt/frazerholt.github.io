@@ -1,64 +1,65 @@
 /* 1. RESET - Removes default browser spacing */
-body, h1, p {
+body, h1, h2, p, header, footer, section {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Important for layout consistency */
 }
 
-/* 2. TYPOGRAPHY - The vibe of the site */
+/* 2. TYPOGRAPHY & COLORS - The vibe of the site */
 body {
-    font-family: 'Georgia', serif; /* Good for reading poems */
-    background-color: #fdfdfd; /* Off-white is easier on the eyes */
-    color: #333; /* Dark grey, not pure black */
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #111111 !important;  /* Soft Black background */
+    color: #e0e0e0;             /* Off-white text */
     line-height: 1.6;
 }
 
 /* 3. LAYOUT - Centers the content */
 .container {
-    max-width: 700px; /* Keeps text lines from getting too long to read */
-    margin: 0 auto; /* Centers the box */
+    max-width: 900px; 
+    margin: 0 auto; /* Centers the whole container */
     padding: 40px 20px;
 }
 
-/* 4. NAVIGATION - The Breadcrumbs */
+/* 4. NAVIGATION */
 nav {
-    margin-bottom: 60px;
-    font-family: 'Helvetica', 'Arial', sans-serif; /* Contrast font for UI */
-    font-size: 0.9rem;
-    color: #888;
+    margin-bottom: 80px;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333; /* A subtle separator line */
 }
 
 nav a {
     text-decoration: none;
-    color: #888;
-    margin-right: 10px;
+    color: #aaaaaa; /* Light gray link color */
+    margin-right: 25px;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #000;
-    text-decoration: underline;
+    color: #ffffff;
 }
 
-/* 5. ART & POETRY STYLING */
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    font-weight: normal;
-}
-
-.date {
-    font-style: italic;
-    color: #999;
+/* 5. CONTENT STYLING */
+header {
     margin-bottom: 40px;
-    font-size: 0.9rem;
 }
 
-.content-body p {
-    margin-bottom: 20px; /* Space between stanzas or paragraphs */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-/* If you add images later */
-img {
-    max-width: 100%; /* Ensures images never overflow the screen */
-    height: auto;
-    display: block;
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #bbbbbb;
+}
+
+footer {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #666;
 }
