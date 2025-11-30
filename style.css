@@ -22,7 +22,19 @@ body {
 }
 
 /* 4. NAVIGATION */
-nav {
+nav
+{
+    /* ADD THESE TWO LINES TO CENTER THE LINKS */
+    display: flex;
+    justify-content: center;
+    /* -------------------------------------- */
+    margin-bottom: 80px;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333; 
+}
+
+{
     margin-bottom: 80px;
     font-size: 1.1rem;
     padding-bottom: 5px;
