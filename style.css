@@ -53,7 +53,7 @@ h2 {
     color: #bbbbbb;
 }
 
-```css
+
 /* --- LOGO STYLES --- */
 .logo-container {
     /* Flexbox centering: tells the container to be a flexible box */
@@ -70,7 +70,6 @@ h2 {
     height: auto;
     display: block; /* Ensures the image behaves properly */
 }
-
 
 /* --- GALLERY GRID STYLES (3-Column Layout) --- */
 .gallery-grid {
