@@ -147,3 +147,29 @@ footer {
         width: 100%; 
     }
 }
+
+/* --- ART DETAIL PAGE STYLES --- */
+.art-detail {
+    margin-top: 50px;
+}
+
+.art-image-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #333; /* Frame around the image */
+}
+
+.art-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.art-info h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.art-info p {
+    margin-bottom: 15px;
+}
