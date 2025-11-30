@@ -1,22 +1,23 @@
-/* 1. RESET - Removes default browser spacing */
-body, h1, h2, p, header, footer, section {
+/* 1. RESET - Removes default browser spacing and ensures consistent box sizing */
+body, h1, h2, p, header, footer, section, div, ul, li {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Important for layout consistency */
+    box-sizing: border-box; 
 }
 
-/* 2. TYPOGRAPHY & COLORS - The vibe of the site */
+/* 2. TYPOGRAPHY & COLORS - THE DARK THEME */
 body {
     font-family: 'Georgia', 'Arial', sans-serif;
-    background-color: #000000 !important /* Soft Black background */
-    color: #ffffff   !important   /* Off-white text */
+    /* --- BLACK BACKGROUND HERE --- */
+    background-color: #000000;  
+    color: #e0e0e0;             /* Off-white text */
     line-height: 1.6;
 }
 
 /* 3. LAYOUT - Centers the content */
 .container {
     max-width: 900px; 
-    margin: 0 auto; /* Centers the whole container */
+    margin: 0 auto; 
     padding: 40px 20px;
 }
 
@@ -25,12 +26,12 @@ nav {
     margin-bottom: 80px;
     font-size: 1.1rem;
     padding-bottom: 5px;
-    border-bottom: 1px solid #333; /* A subtle separator line */
+    border-bottom: 1px solid #333; 
 }
 
 nav a {
     text-decoration: none;
-    color: #aaaaaa; /* Light gray link color */
+    color: #aaaaaa; 
     margin-right: 25px;
     transition: color 0.3s;
 }
@@ -40,10 +41,6 @@ nav a:hover {
 }
 
 /* 5. CONTENT STYLING */
-header {
-    margin-bottom: 40px;
-}
-
 h1 {
     font-size: 3rem;
     margin-bottom: 10px;
@@ -56,31 +53,17 @@ h2 {
     color: #bbbbbb;
 }
 
-footer {
-    margin-top: 80px;
-    padding-top: 20px;
-    border-top: 1px solid #333;
-    font-size: 0.8rem;
-    color: #666;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-/* --- GALLERY GRID STYLES --- */
-
-/* 1. Container Definition: Defines the 3-Column Grid */
+/* --- GALLERY GRID STYLES (3-Column Layout) --- */
 .gallery-grid {
     display: grid;
     /* Create three columns, each taking up an equal fraction of the space */
     grid-template-columns: repeat(3, 1fr);
-    /* Space between the columns/rows */
     gap: 30px; 
     margin-top: 50px;
 }
 
-/* 2. Individual Item Styling */
 .gallery-item {
-    background-color: #222; /* Slightly lighter box for contrast */
+    background-color: #222; 
     padding: 15px;
     text-align: center;
     border: 1px solid #444;
@@ -88,42 +71,31 @@ footer {
 }
 
 .gallery-item:hover {
-    background-color: #333; /* Highlights on hover */
+    background-color: #333; 
 }
 
 .gallery-item a {
     text-decoration: none;
-    color: inherit; /* Keeps the link color the same as the text */
-    display: block; /* Makes the whole box clickable */
+    color: inherit; 
+    display: block; 
 }
 
-/* 3. Responsive Breakpoint (For Mobile) */
-@media (max-width: 768px) {
-    /* Below 768px wide, switch to 2 columns */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-@media (max-width: 480px) {
-    /* Below 480px wide (phones), switch to 1 column */
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-/* --- ABOUT PAGE STYLES --- */
-
+/* --- ABOUT PAGE STYLES (Flexbox Layout) --- */
 .about-content {
-    display: flex; /* Enables flexible layout */
-    gap: 40px; /* Space between the image and text */
-    align-items: flex-start; /* Aligns content to the top */
+    display: flex; 
+    gap: 40px; 
+    align-items: flex-start; 
     margin-top: 50px;
 }
 
 .profile-image {
-    /* Set a fixed size for the image container */
-    flex-shrink: 0; /* Prevents the image from shrinking on smaller screens */
+    flex-shrink: 0; 
     width: 250px; 
     border: 3px solid #333;
 }
@@ -135,22 +107,43 @@ footer {
 }
 
 .profile-text {
-    /* Allows the text block to take up the remaining space */
     flex-grow: 1; 
 }
 
-/* Mobile Responsiveness for About Page */
+/* FOOTER */
+footer {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+/* Tablet/Mid-size screens */
 @media (max-width: 768px) {
+    /* Gallery: Switch to 2 columns */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    /* About: Stack image and text */
     .about-content {
-        /* On small screens, stack the image on top of the text */
         flex-direction: column; 
         gap: 20px;
     }
     .profile-image {
-        /* Center the image when stacked */
         width: 60%;
         margin: 0 auto;
     }
-=======
-=======
+}
+/* Mobile/Small screens */
+@media (max-width: 480px) {
+    /* Gallery: Switch to 1 column */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .profile-image {
+        width: 100%; 
+    }
 }
