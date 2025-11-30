@@ -76,13 +76,13 @@ h2 {
 
 .main-logo {
     /* Set a max size for desktop display */
-    max-width: 250px; 
+    max-width: 400px; 
     height: auto;
     display: block;
     /* NEW: Use a responsive unit (vw) to scale the logo on small screens */
     width: 50vw; /* The logo will take up 50% of the viewport width */
     /* Override for devices wider than the max-width, keeping it max-width */
-    width: min(50vw, 250px); 
+    width: min(50vw, 400px); 
 }
 
 
