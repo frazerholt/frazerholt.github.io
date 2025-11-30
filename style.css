@@ -1,5 +1,5 @@
 /* 1. RESET - Removes default browser spacing and ensures consistent box sizing */
-body, h1, h2, p, header, footer, section, div, ul, li {
+body, h1, h2, p, header, footer, section, div, ul, li, article, pre {
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
@@ -14,7 +14,7 @@ img {
 body {
     font-family: 'Georgia', 'Arial', sans-serif;
     /* --- BLACK BACKGROUND HERE --- */
-    background-color: #000000 !important;  
+    background-color: #000000;  /* REMOVED !important tag */
     color: #e0e0e0;             /* Off-white text */
     line-height: 1.6;
 }
@@ -47,7 +47,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff0000d3;
+    color: #ff0000d3; /* Kept your desired red hover color */
 }
 
 /* 5. CONTENT STYLING */
@@ -64,22 +64,27 @@ h2 {
 }
 
 
-/* --- LOGO STYLES --- */
+/* --- LOGO STYLES (FIXED) --- */
 .logo-container {
-    /* Flexbox centering: tells the container to be a flexible box */
     display: flex;
-    /* Centers the item horizontally */
     justify-content: center; 
-    margin-top: 10px;
-    margin-bottom: 20px;
+    /* Reduced top margin, maintained bottom margin */
+    margin: 5px 0 20px 0;
+    /* Ensures the container itself doesn't cause overflow */
+    width: 100%; 
 }
 
 .main-logo {
-    /* Control the size of the logo. Adjust this value as needed. */
-    max-width: 180px; 
+    /* Set a max size for desktop display */
+    max-width: 250px; 
     height: auto;
-    display: block; /* Ensures the image behaves properly */
+    display: block;
+    /* NEW: Use a responsive unit (vw) to scale the logo on small screens */
+    width: 50vw; /* The logo will take up 50% of the viewport width */
+    /* Override for devices wider than the max-width, keeping it max-width */
+    width: min(50vw, 250px); 
 }
+
 
 /* --- GALLERY GRID STYLES (3-Column Layout) --- */
 .gallery-grid {
@@ -173,6 +178,10 @@ footer {
     }
     .profile-image {
         width: 100%; 
+    }
+    /* FIX: Reduce container padding on small screens to give more room */
+    .container {
+        padding: 20px 10px; 
     }
 }
 
