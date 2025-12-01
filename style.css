@@ -31,9 +31,16 @@ img {
     height: auto;
 }
 
+/* Add this new rule below the body selector, or inside your CONTENT STYLING section */
+h1, h2, h3 { 
+    /* Force headers to use Cheboyga, falling back to Georgia if needed */
+    font-family: 'Cheboyga', 'Georgia', serif;
+}
+
+
 /* 2. TYPOGRAPHY & COLORS - THE DARK THEME */
 body {
-    font-family: 'Cheboyga', 'Georgia', serif; /* Serif font for a classic look */
+    font-family: 'Georgia', serif; /* Serif font for a classic look */
     /* --- BLACK BACKGROUND HERE --- */
     background-color: #000000;  /* REMOVED !important tag */
     color: #e0e0e0;             /* Off-white text */
