@@ -181,7 +181,7 @@ footer {
     }
     /* FIX: Reduce container padding on small screens to give more room */
     .container {
-        padding: 20px 10px; 
+        padding: 0px 0px; 
     }
 }
 
