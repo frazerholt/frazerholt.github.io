@@ -177,7 +177,7 @@ footer {
     }
 }
 /* Mobile/Small screens */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     /* Gallery: Switch to 1 column */
     .gallery-grid {
         grid-template-columns: 1fr;
