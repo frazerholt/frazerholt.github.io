@@ -50,6 +50,12 @@ nav a:hover {
     color: #ff0000d3; /* Kept your desired red hover color */
 }
 
+header {
+    text-align: center; /* THIS CENTERS ALL TEXT INSIDE THE HEADER */
+    margin-bottom: 40px; /* Add some space below the header content */
+}
+
+
 /* 5. CONTENT STYLING */
 h1 {
     font-size: 3rem;
