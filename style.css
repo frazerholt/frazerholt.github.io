@@ -75,14 +75,14 @@ h2 {
     display: flex;
     justify-content: center; 
     /* Reduced top margin, maintained bottom margin */
-    margin: 5px 0 20px 0;
+    margin: 15px 0 20px 0;
     /* Ensures the container itself doesn't cause overflow */
     width: 100%; 
 }
 
 .main-logo {
     /* Set a max size for desktop display */
-    max-width: 550px; 
+    max-width: 800px; 
     height: auto;
     display: block;
     /* NEW: Use a responsive unit (vw) to scale the logo on small screens */
