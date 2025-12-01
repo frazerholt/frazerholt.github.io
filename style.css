@@ -31,11 +31,6 @@ img {
     height: auto;
 }
 
-/* Add this new rule below the body selector, or inside your CONTENT STYLING section */
-h1, h2, h3 { 
-    /* Force headers to use Cheboyga, falling back to Georgia if needed */
-    font-family: 'Cheboyga', 'Georgia', serif;
-}
 
 
 /* 2. TYPOGRAPHY & COLORS - THE DARK THEME */
@@ -99,6 +94,14 @@ h2 {
 }
 
 
+/* Add this new rule below the body selector, or inside your CONTENT STYLING section */
+h1, h2, h3 { 
+    /* Force headers to use Cheboyga, falling back to Georgia if needed */
+    font-family: 'Cheboyga', 'Georgia', serif;
+}
+
+
+
 /* --- LOGO STYLES (FIXED) --- */
 .logo-container {
     display: flex;
@@ -106,7 +109,7 @@ h2 {
     /* Reduced top margin, maintained bottom margin */
     margin: 15px 0 20px 0;
     /* Ensures the container itself doesn't cause overflow */
-    width: 100%; 
+    width: 120%; 
 }
 
 .main-logo {
@@ -117,7 +120,7 @@ h2 {
     /* NEW: Use a responsive unit (vw) to scale the logo on small screens */
     width: 50vw; /* The logo will take up 70% of the viewport width */
     /* Override for devices wider than the max-width, keeping it max-width */
-    width: min(70vw, 800px); 
+    width: min(80vw, 800px); 
 }
 
 
