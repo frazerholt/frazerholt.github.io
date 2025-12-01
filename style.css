@@ -80,7 +80,7 @@ h2 {
     height: auto;
     display: block;
     /* NEW: Use a responsive unit (vw) to scale the logo on small screens */
-    width: 50vw; /* The logo will take up 50% of the viewport width */
+    width: 70vw; /* The logo will take up 70% of the viewport width */
     /* Override for devices wider than the max-width, keeping it max-width */
     width: min(50vw, 550px); 
 }
