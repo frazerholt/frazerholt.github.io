@@ -109,7 +109,7 @@ h1, h2, h3 {
     /* Reduced top margin, maintained bottom margin */
     margin: 15px 0 20px 0;
     /* Ensures the container itself doesn't cause overflow */
-    width: 120%; 
+    width: 100%; 
 }
 
 .main-logo {
@@ -120,7 +120,7 @@ h1, h2, h3 {
     /* NEW: Use a responsive unit (vw) to scale the logo on small screens */
     width: 50vw; /* The logo will take up 70% of the viewport width */
     /* Override for devices wider than the max-width, keeping it max-width */
-    width: min(80vw, 800px); 
+    width: min(70vw, 800px); 
 }
 
 
