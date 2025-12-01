@@ -97,6 +97,8 @@ h2 {
 h1, h2, h3 { 
     /* Force headers to use Cheboyga, falling back to Georgia if needed */
     font-family: 'Cheboyga', 'Georgia', serif;
+    
+    font-weight: normal; 
 }
 
 
