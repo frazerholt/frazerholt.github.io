@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Cheboyga';
+    /* The src path must correctly point to where you saved the .ttf file.
+       We use the Root Relative Path here.
+    */
+    src: url('/assets/cheboyga.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ------------------ START OF EXISTING CSS ------------------ */
+
+/* 1. RESET - Removes default browser spacing and ensures consistent box sizing */
+body, h1, h2, p, header, footer, section, div, ul, li, article, pre {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+/* ... rest of your CSS file continues below ... */
+
+
 /* 1. RESET - Removes default browser spacing and ensures consistent box sizing */
 body, h1, h2, p, header, footer, section, div, ul, li, article, pre {
     margin: 0;
@@ -12,7 +33,7 @@ img {
 
 /* 2. TYPOGRAPHY & COLORS - THE DARK THEME */
 body {
-    font-family: 'Georgia', 'Georgia', serif; /* Serif font for a classic look */
+    font-family: 'Cheboyga', 'Georgia', serif; /* Serif font for a classic look */
     /* --- BLACK BACKGROUND HERE --- */
     background-color: #000000;  /* REMOVED !important tag */
     color: #e0e0e0;             /* Off-white text */
@@ -177,7 +198,7 @@ footer {
     }
 }
 /* Mobile/Small screens */
-@media (max-width: 580px) {
+@media (max-width: 480px) {
     /* Gallery: Switch to 1 column */
     .gallery-grid {
         grid-template-columns: 1fr;
