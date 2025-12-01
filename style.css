@@ -12,11 +12,11 @@ img {
 
 /* 2. TYPOGRAPHY & COLORS - THE DARK THEME */
 body {
-    font-family: 'Georgia', 'Arial', sans-serif;
+    font-family: 'Georgia', 'Georgia', serif; /* Serif font for a classic look */
     /* --- BLACK BACKGROUND HERE --- */
     background-color: #000000;  /* REMOVED !important tag */
     color: #e0e0e0;             /* Off-white text */
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 /* 3. LAYOUT - Centers the content */
