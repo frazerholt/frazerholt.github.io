@@ -108,7 +108,7 @@ h1, h2, h3 {
     display: flex;
     justify-content: center; 
     /* Reduced top margin, maintained bottom margin */
-    margin: 15px 0 20px 0;
+    margin: 20px 0 20px 0;
     /* Ensures the container itself doesn't cause overflow */
     width: 100%; 
 }
@@ -222,6 +222,15 @@ footer {
     .container {
         padding: 20px 10px; 
     }
+
+    nav {
+        /* Adjust this value: Try -2px or -3px. A negative margin pushes the element left. */
+        margin-left: -2px; 
+    }
+
+
+
+
 }
 
 /* --- ART DETAIL PAGE STYLES --- */
