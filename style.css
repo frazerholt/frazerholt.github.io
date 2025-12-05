@@ -207,7 +207,12 @@ footer {
     display: block; /* Important for alignment */
 }
 
-
+/* --- FOOTER COPYRIGHT TEXT FIX --- */
+/* Target the text inside the new copyright-text div */
+.copyright-text p {
+    /* Set color to your preferred off-white or light gray */
+    color: #cfcfcf; 
+}
 
 
 
