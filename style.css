@@ -16,15 +16,6 @@ body, h1, h2, p, header, footer, section, div, ul, li, article, pre {
     padding: 0;
     box-sizing: border-box; 
 }
-/* ... rest of your CSS file continues below ... */
-
-
-/* 1. RESET - Removes default browser spacing and ensures consistent box sizing */
-body, h1, h2, p, header, footer, section, div, ul, li, article, pre {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-}
 
 img {
     max-width: 100%;
@@ -40,7 +31,7 @@ img {
 body {
     font-family: 'Georgia', serif; /* Serif font for a classic look */
     /* --- BLACK BACKGROUND HERE --- */
-    background-color: #000000;  /* REMOVED !important tag */
+    background-color: #000000;  /* Pure black background */
     color: #e0e0e0;             /* Off-white text */
     line-height: 1.8;
 }
@@ -55,10 +46,10 @@ body {
 /* 4. NAVIGATION */
 nav
 {
-    /* ADD THESE TWO LINES TO CENTER THE LINKS */
+    /* Center the links */
     display: flex;
     justify-content: center;
-    /* -------------------------------------- */
+    
     margin-bottom: 10px;
     font-size: 1.1rem;
     padding-bottom: 5px;
@@ -73,12 +64,12 @@ nav a {
 }
 
 nav a:hover {
-    color: #9c0404; /* Kept your desired red hover color */
+    color: #9c0404; /* Red hover color */
 }
 
 header {
     text-align: center; /* THIS CENTERS ALL TEXT INSIDE THE HEADER */
-    margin-bottom: 40px; /* Add some space below the header content */
+    margin-bottom: 40px; 
 }
 
 
@@ -96,34 +87,25 @@ h2 {
 }
 
 
-/* Add this new rule below the body selector, or inside your CONTENT STYLING section */
 h1, h2, h3 { 
-    /* Force headers to use Cheboyga, falling back to Georgia if needed */
+    /* Force headers to use Cheboyga */
     font-family: 'Cheboyga', 'Georgia', serif;
-    
-    font-weight: normal; 
+    font-weight: normal; /* Prevents synthetic bolding */
 }
-
 
 
 /* --- LOGO STYLES (FIXED) --- */
 .logo-container {
     display: flex;
     justify-content: center; 
-    /* Reduced top margin, maintained bottom margin */
     margin: 0px 0 0px 0;
-    /* Ensures the container itself doesn't cause overflow */
     width: 100%; 
 }
 
 .main-logo {
-    /* Set a max size for desktop display */
-    max-width: 1200px; 
     height: auto;
     display: block;
-    /* NEW: Use a responsive unit (vw) to scale the logo on small screens */
-    width: 50vw; /* The logo will take up 70% of the viewport width */
-    /* Override for devices wider than the max-width, keeping it max-width */
+    /* Responsive size: 70% of viewport width, capped at 1200px */
     width: min(70vw, 1200px); 
 }
 
@@ -131,7 +113,6 @@ h1, h2, h3 {
 /* --- GALLERY GRID STYLES (3-Column Layout) --- */
 .gallery-grid {
     display: grid;
-    /* Create three columns, each taking up an equal fraction of the space */
     grid-template-columns: repeat(3, 1fr);
     gap: 30px; 
     margin-top: 50px;
@@ -194,64 +175,6 @@ footer {
     color: #666;
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
-/* Tablet/Mid-size screens */
-@media (max-width: 768px) {
-    /* Gallery: Switch to 2 columns */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    /* About: Stack image and text */
-    .about-content {
-        flex-direction: column; 
-        gap: 20px;
-    }
-    .profile-image {
-        width: 60%;
-        margin: 0 auto;
-    }
-}
-
-
-/* Mobile/Small screens */
-@media (max-width: 800px) {
-/* ... other mobile fixes like .profile-image { width: 100%; } ... */
-
-    /* ADD or UPDATE THIS RULE: Sets the Visual Navigation Grid to 2 columns */
-    .landing-grid {
-        grid-template-columns: repeat(2, 1fr); /* 👈 The correct 2-column rule */
-        gap: 15px; 
-    }
-}
-/* TIGHTEN THE PADDING ON THE INDIVIDUAL BOXES */
-    .grid-nav-item {
-        /* Reduce horizontal padding from 15px to 8px or 10px */
-        padding: 10px 8px;
-
-    
-    /* FIX: Gallery grid on content pages (already there, just shown for context) */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-
-    /* ... rest of the 480px rules ... */
-}
-
-    .profile-image {
-        width: 100%; 
-    }
-
-    /* FIX: Reduce container padding on small screens to give more room */
-    .container {
-        padding: 20px 10px; 
-    }
-
-    nav {
-        /* Adjust this value: Try -2px or -3px. A negative margin pushes the element left. */
-        margin-left: 20px; 
-    }
-
 
 /* --- ART DETAIL PAGE STYLES --- */
 .art-detail {
@@ -278,8 +201,6 @@ footer {
 .art-info p {
     margin-bottom: 15px;
 }
-
-
 
 
 /* --- LANDING PAGE GRID NAVIGATION --- */
@@ -321,19 +242,64 @@ footer {
     color: #e0e0e0;
 }
 
-/* RESPONSIVE FIX for LANDING GRID */
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablet/Mid-size screens (Max-width 768px) */
 @media (max-width: 768px) {
-    /* Tablet/Mid-size screens: Switch to 2 columns */
+    /* General Gallery: Switch to 2 columns */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    /* Landing Grid: Switch to 2 columns */
     .landing-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+    /* About: Stack image and text */
+    .about-content {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .profile-image {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
 
+
+/* Mobile/Small screens (Max-width 480px) */
 @media (max-width: 480px) {
-    /* Mobile: Switch to 1 column for easy tapping */
+
+    /* LANDING GRID FIX: Set to 2 columns and tightens spacing */
     .landing-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 8px; /* Aggressive reduction in gap */
+    }
+
+    /* GENERAL GALLERY FIX: Ensures content pages are 2 columns */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
+    }
+
+    /* TIGHTEN PADDING on the individual navigation boxes */
+    .grid-nav-item {
+        padding: 10px 8px; /* Aggressive reduction in padding */
+    }
+    
+    /* CONTAINER FIX: Reduce overall page padding on small screens */
+    .container {
+        padding: 20px 10px; 
+    }
+    
+    .profile-image {
+        width: 100%; 
+    }
+    
+    /* NAV ALIGNMENT FIX (Replaced your 20px margin-left with 0 to start fresh) */
+    nav {
+        margin-left: 0; 
     }
 }
