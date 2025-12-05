@@ -196,7 +196,7 @@ footer {
 
 /* --- RESPONSIVE MEDIA QUERIES --- */
 /* Tablet/Mid-size screens */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     /* Gallery: Switch to 2 columns */
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -214,11 +214,21 @@ footer {
 }
 /* Mobile/Small screens */
 @media (max-width: 480px) {
-    /* Gallery: Switch to 1 column */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+/* ... other mobile fixes like .profile-image { width: 100%; } ... */
+
+    /* ADD or UPDATE THIS RULE: Sets the Visual Navigation Grid to 2 columns */
+    .landing-grid {
+        grid-template-columns: repeat(2, 1fr); /* 👈 The correct 2-column rule */
+        gap: 15px; 
     }
+    
+    /* FIX: Gallery grid on content pages (already there, just shown for context) */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    /* ... rest of the 480px rules ... */
+}
 
     .profile-image {
         width: 100%; 
@@ -234,10 +244,6 @@ footer {
         margin-left: 20px; 
     }
 
-
-
-
-}
 
 /* --- ART DETAIL PAGE STYLES --- */
 .art-detail {
