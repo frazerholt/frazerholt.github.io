@@ -56,16 +56,51 @@ nav
     border-bottom: 1px solid #333; 
 }
 
+/* --- UPDATED FOR SLIDING UNDERLINE ANIMATION --- */
 nav a {
     text-decoration: none;
     color: #aaaaaa; 
     margin-right: 20px;
-    transition: color 0.3s;
+    
+    /* Crucial for positioning the underline */
+    position: relative; 
+    
+    /* Adds the smooth transition to the link color */
+    transition: color 0.3s; 
+}
+
+/* 1. Create the Underline Bar using ::after */
+nav a::after {
+    content: '';
+    /* Position the bar at the bottom center of the link */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    /* Set the initial size and color of the bar */
+    width: 100%;
+    height: 1px; /* Adjust this to make the line thicker/thinner */
+    background-color: #9c0404; /* Uses your red hover color */
+    
+    /* Start the bar completely hidden (scaled down to zero width) */
+    transform: scaleX(0);
+    transform-origin: bottom center; /* Bar slides from center outward */
+    
+    /* Make the transition smooth and fast */
+    transition: transform 0.3s ease-out;
+}
+
+/* 2. Animate the bar and text color on hover */
+nav a:hover::after {
+    /* Scale the bar up to 100% width, making it visible */
+    transform: scaleX(1);
 }
 
 nav a:hover {
-    color: #9c0404; /* Red hover color */
+    color: #9c0404; /* Keeps your desired link text color change */
 }
+/* --- END ANIMATION UPDATE --- */
+
 
 header {
     text-align: center; /* THIS CENTERS ALL TEXT INSIDE THE HEADER */
@@ -105,7 +140,7 @@ h1, h2, h3 {
 .main-logo {
     height: auto;
     display: block;
-    /* Responsive size: 70% of viewport width, capped at 1200px */
+    /* Responsive size: 95% of viewport width, capped at 1200px */
     width: min(95vw, 1200px); 
 }
 
@@ -197,9 +232,6 @@ footer {
     color: #9c0404; /* Uses your red hover color */
 }
 
-/* --- FOOTER SOCIAL LINKS --- */
-/* (Keep the existing .social-links and .social-links a styles) */
-
 /* Ensures icons are small and uniform */
 .social-icon {
     width: 32px; /* Set a fixed width */
@@ -213,7 +245,6 @@ footer {
     /* Set color to your preferred off-white or light gray */
     color: #cfcfcf; 
 }
-
 
 
 /* --- ART DETAIL PAGE STYLES --- */
