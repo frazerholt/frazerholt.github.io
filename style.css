@@ -225,7 +225,7 @@ footer {
 
     nav {
         /* Adjust this value: Try -2px or -3px. A negative margin pushes the element left. */
-        margin-left: -5px; 
+        margin-left: 20px; 
     }
 
 
