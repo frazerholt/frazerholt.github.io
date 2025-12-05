@@ -213,7 +213,7 @@ footer {
     }
 }
 /* Mobile/Small screens */
-@media (max-width: 480px) {
+@media (max-width: 800px) {
 /* ... other mobile fixes like .profile-image { width: 100%; } ... */
 
     /* ADD or UPDATE THIS RULE: Sets the Visual Navigation Grid to 2 columns */
