@@ -216,11 +216,14 @@ footer {
 @media (max-width: 480px) {
     /* Gallery: Switch to 1 column */
     .gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
+    
     .profile-image {
         width: 100%; 
     }
+
     /* FIX: Reduce container padding on small screens to give more room */
     .container {
         padding: 20px 10px; 
