@@ -108,7 +108,7 @@ h1, h2, h3 {
     display: flex;
     justify-content: center; 
     /* Reduced top margin, maintained bottom margin */
-    margin: 20px 0 20px 0;
+    margin: 0px 0 0px 0;
     /* Ensures the container itself doesn't cause overflow */
     width: 100%; 
 }
