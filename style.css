@@ -168,12 +168,47 @@ h1, h2, h3 {
 
 /* FOOTER */
 footer {
+    /* Enable flexbox for alignment */
+    display: flex;
+    justify-content: space-between; /* Pushes content to the far left and right */
+    align-items: center; /* Vertically centers items */
+    
     margin-top: 80px;
     padding-top: 20px;
+    padding-bottom: 20px; /* Added padding to the bottom */
     border-top: 1px solid #333;
     font-size: 0.8rem;
-    color: #666;
+    color: #000000;
 }
+
+/* --- FOOTER SOCIAL LINKS --- */
+.social-links {
+    display: flex;
+    gap: 15px; /* Spacing between icons */
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #aaaaaa; /* Default link color */
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #9c0404; /* Uses your red hover color */
+}
+
+/* --- FOOTER SOCIAL LINKS --- */
+/* (Keep the existing .social-links and .social-links a styles) */
+
+/* Ensures icons are small and uniform */
+.social-icon {
+    width: 32px; /* Set a fixed width */
+    height: 32px; /* Set a fixed height */
+    display: block; /* Important for alignment */
+}
+
+
+
 
 
 /* --- ART DETAIL PAGE STYLES --- */
