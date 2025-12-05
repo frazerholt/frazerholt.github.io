@@ -106,7 +106,7 @@ h1, h2, h3 {
     height: auto;
     display: block;
     /* Responsive size: 70% of viewport width, capped at 1200px */
-    width: min(85vw, 1200px); 
+    width: min(95vw, 1200px); 
 }
 
 
