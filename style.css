@@ -115,7 +115,7 @@ h1, h2, h3 {
 
 .main-logo {
     /* Set a max size for desktop display */
-    max-width: 800px; 
+    max-width: 1200px; 
     height: auto;
     display: block;
     /* NEW: Use a responsive unit (vw) to scale the logo on small screens */
