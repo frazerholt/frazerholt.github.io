@@ -212,6 +212,8 @@ footer {
         margin: 0 auto;
     }
 }
+
+
 /* Mobile/Small screens */
 @media (max-width: 800px) {
 /* ... other mobile fixes like .profile-image { width: 100%; } ... */
@@ -221,6 +223,12 @@ footer {
         grid-template-columns: repeat(2, 1fr); /* 👈 The correct 2-column rule */
         gap: 15px; 
     }
+}
+/* TIGHTEN THE PADDING ON THE INDIVIDUAL BOXES */
+    .grid-nav-item {
+        /* Reduce horizontal padding from 15px to 8px or 10px */
+        padding: 10px 8px;
+
     
     /* FIX: Gallery grid on content pages (already there, just shown for context) */
     .gallery-grid {
