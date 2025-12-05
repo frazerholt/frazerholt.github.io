@@ -292,7 +292,7 @@ footer {
 
 .grid-nav-item img {
     /* Ensures the image doesn't exceed its grid cell */
-    width: 80%;
+    width: 100%;
     height: auto;
     margin-bottom: 10px;
     display: block;
