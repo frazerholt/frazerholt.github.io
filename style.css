@@ -298,7 +298,7 @@ footer {
 }
 
 .grid-nav-item:hover {
-    background-color: #9c0404;
+    background-color: #ffe8ca;
 }
 
 .grid-nav-item img {
@@ -312,7 +312,7 @@ footer {
 .grid-nav-item h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: #e0e0e0;
+    color: #9c0404;
 }
 
 
