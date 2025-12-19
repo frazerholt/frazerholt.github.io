@@ -428,3 +428,17 @@ footer {
         transform: translateX(-50%);
     }
 }
+
+
+/* --- DROP CAP FOR STORY PAGES --- */
+.story-body p:first-of-type::first-letter {
+    font-size: 4rem;          /* Large size */
+    font-weight: 900;         /* Very bold */
+    float: left;              /* Wraps text around the letter */
+    line-height: 0.85;        /* Brings the second line of text up closer */
+    margin-top: 0.1em;        /* Adjusts vertical alignment */
+    margin-right: 0.15em;     /* Space between the letter and the words */
+    color: #fff;              /* Or use #d7ff01 for your brand yellow */
+    text-transform: uppercase;
+    font-family: 'Georgia', serif; /* A serif font looks more "book-like" */
+}
