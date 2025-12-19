@@ -404,3 +404,27 @@ footer {
         rgba(0, 0, 0, 0.07) 11px
     );
 }
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    /* This starts the animation defined below */
+    animation: scroll-left 40s linear infinite; 
+}
+
+.marquee span {
+    display: inline-block;
+    padding-right: 0; /* Ensures seamless transition */
+}
+
+/* THE ANIMATION LOGIC */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* This moves exactly half the width of the total content 
+           (one full span) before snapping back to start */
+        transform: translateX(-50%);
+    }
+}
