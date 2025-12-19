@@ -376,3 +376,55 @@ footer {
         margin-left: 0; 
     }
 }
+
+/* --- SCROLLING PINSTRIPE BANNER --- */
+.warning-banner {
+    width: 100%;
+    background-color: #d7ff01; /* Your specific yellow */
+    
+    /* Subtle Pinstripe Overlay */
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0, 0, 0, 0.05) 10px,
+        rgba(0, 0, 0, 0.05) 11px
+    );
+    
+    color: #000;
+    overflow: hidden; /* Hides the text that goes off-screen */
+    white-space: nowrap; /* Keeps text in one long line */
+    padding: 6px 0;
+    font-family: 'Georgia', serif; /* Or sans-serif for a more clinical look */
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    z-index: 1000;
+}
+
+.marquee {
+    display: inline-block;
+    animation: scroll-left 25s linear infinite; /* Adjust '25s' to change speed */
+}
+
+.marquee span {
+    display: inline-block;
+    padding-right: 40px; /* Space between the repeating sentences */
+}
+
+/* The Loop Animation */
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+    /* -50% works because we have two identical spans. 
+       When the first finishes, the second is in its place, 
+       creating a seamless jump-back. */
+}
+
+/* Optional: Pauses on hover so visitors can read it easily */
+.warning-banner:hover .marquee {
+    animation-play-state: paused;
+}
+
