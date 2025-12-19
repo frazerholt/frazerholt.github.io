@@ -383,8 +383,8 @@ footer {
 
 .warning-banner {
     width: 100% !important;
-    background-color: #d9ff0165 !important; /* Force Yellow */
-    color: #000000 !important; /* Force Black Text */
+    background-color: #00000000 !important; /* Force Yellow */
+    color: #d7ff01 !important; /* Force Black Text */
     overflow: hidden !important;
     white-space: nowrap !important;
     padding: 10px 0 !important;
