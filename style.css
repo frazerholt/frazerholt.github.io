@@ -407,7 +407,7 @@ footer {
 .marquee {
     display: inline-block !important;
     white-space: nowrap !important;
-    animation: scroll-left 20s linear infinite !important;
+    animation: scroll-left 10s linear infinite !important;
 }
 
 .marquee span {
