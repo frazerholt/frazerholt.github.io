@@ -377,46 +377,30 @@ footer {
     }
 }
 
-/* =========================================
-   SCROLLING WARNING BANNER
-   ========================================= */
-
 .warning-banner {
-    width: 100% !important;
-    background-color: #d7ff01 !important; /* Force Yellow */
-    color: #000000 !important; /* Force Black Text */
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    padding: 2px 0 !important;
-    font-family: sans-serif !important;
-    font-size: 12px !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    border-bottom: 1px solid #000 !important;
+    width: 100%;
+    background-color: #d7ff01; /* Your yellow */
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
     
-    /* Pinstripe Effect */
+    /* CONTROL TALLNESS HERE */
+    padding: 2px 0;      /* Minimal vertical space */
+    font-size: 10px;     /* Smaller text for a thinner banner */
+    line-height: 1;      /* Keeps letters from adding extra height */
+    
+    font-family: sans-serif;
+    font-weight: 900;    /* Thick letters for readability at small sizes */
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: 1px solid #000;
+
+    /* Pinstripe pattern */
     background-image: repeating-linear-gradient(
         45deg,
         transparent,
         transparent 10px,
-        #000000 10px,
-        #000000 10px
+        rgba(0, 0, 0, 0.07) 10px,
+        rgba(0, 0, 0, 0.07) 11px
     );
-}
-
-.marquee {
-    display: inline-block !important;
-    white-space: nowrap !important;
-    animation: scroll-left 40s linear infinite !important;
-}
-
-.marquee span {
-    display: inline-block !important;
-    padding-right: 50px !important;
-}
-
-/* The Animation */
-@keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
 }
