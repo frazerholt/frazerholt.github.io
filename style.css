@@ -383,13 +383,13 @@ footer {
 
 .warning-banner {
     width: 100% !important;
-    background-color: #00000000 !important; /* Force Yellow */
-    color: #d7ff01 !important; /* Force Black Text */
+    background-color: #d7ff01 !important; /* Force Yellow */
+    color: #000000 !important; /* Force Black Text */
     overflow: hidden !important;
     white-space: nowrap !important;
-    padding: 10px 0 !important;
+    padding: 6px 0 !important;
     font-family: sans-serif !important;
-    font-size: 12px !important;
+    font-size: 13px !important;
     font-weight: bold !important;
     text-transform: uppercase !important;
     border-bottom: 1px solid #000 !important;
@@ -399,8 +399,8 @@ footer {
         45deg,
         transparent,
         transparent 10px,
-        #d9ff0175 10px,
-        #d9ff0175 11px
+        #000000 10px,
+        #000000 10px
     );
 }
 
