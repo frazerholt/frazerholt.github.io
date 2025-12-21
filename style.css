@@ -2,6 +2,29 @@
 /* 1. FONTS & RESET                                                           */
 /* -------------------------------------------------------------------------- */
 
+/* 1. Force all links to start as the correct color (not blue) */
+a, a:link {
+    color: inherit;
+    text-decoration: none !important;
+}
+
+/* 2. Specifically ensure navigation links start as off-white */
+nav a, nav a:link {
+    color: #ffe8ca !important;
+    text-decoration: none !important;
+}
+
+/* 3. Keep them the same color after clicking (not purple) */
+a:visited, nav a:visited {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* 4. Ensure nav visited specifically stays off-white */
+nav a:visited {
+    color: #ffe8ca !important;
+}
+
 @font-face {
     font-family: 'Cheboyga';
     src: url('/assets/cheboyga.ttf') format('truetype');
