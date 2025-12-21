@@ -1,16 +1,14 @@
+/* -------------------------------------------------------------------------- */
+/* 1. FONTS & RESET                                                           */
+/* -------------------------------------------------------------------------- */
+
 @font-face {
     font-family: 'Cheboyga';
-    /* The src path must correctly point to where you saved the .ttf file.
-       We use the Root Relative Path here.
-    */
     src: url('/assets/cheboyga.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/* ------------------ START OF EXISTING CSS ------------------ */
-
-/* 1. RESET - Removes default browser spacing and ensures consistent box sizing */
 body, h1, h2, p, header, footer, section, div, ul, li, article, pre {
     margin: 0;
     padding: 0;
@@ -22,114 +20,36 @@ img {
     height: auto;
 }
 
-/* Hides the element when the class is applied (used on the homepage nav) */
-.hide-on-home {
-    display: none !important;
-}
+/* -------------------------------------------------------------------------- */
+/* 2. CORE THEME & TYPOGRAPHY                                                 */
+/* -------------------------------------------------------------------------- */
 
-/* 2. TYPOGRAPHY & COLORS - THE DARK THEME */
 body {
-    font-family: 'Georgia', serif; /* Serif font for a classic look */
-    /* --- BLACK BACKGROUND HERE --- */
-    background-color: #000000;  /* Pure black background */
-    color: #ffe8ca;             /* Off-white text */
+    font-family: 'Georgia', serif; 
+    background-color: #000000;  
+    color: #ffe8ca;             
     line-height: 1.8;
+    overflow-x: hidden; /* Prevents horizontal scroll from the banner */
 }
 
-/* 3. LAYOUT - Centers the content */
+h1, h2, h3 { 
+    font-family: 'Cheboyga', 'Georgia', serif;
+    font-weight: normal; 
+}
+
+h1 { font-size: 3rem; margin-bottom: 10px; }
+h2 { font-size: 2rem; margin-top: 30px; margin-bottom: 15px; color: #ffe8ca; }
+
+/* -------------------------------------------------------------------------- */
+/* 3. LAYOUT & CONTAINERS                                                     */
+/* -------------------------------------------------------------------------- */
+
 .container {
     max-width: 900px; 
     margin: 0 auto; 
     padding: 40px 20px;
 }
 
-/* 4. NAVIGATION */
-nav
-{
-    /* Center the links */
-    display: flex;
-    justify-content: center;
-    
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #333; 
-}
-
-/* --- UPDATED FOR SLIDING UNDERLINE ANIMATION --- */
-nav a {
-    text-decoration: none;
-    color: #ffe8ca; 
-    margin-right: 20px;
-    
-    /* Crucial for positioning the underline */
-    position: relative; 
-    
-    /* Adds the smooth transition to the link color */
-    transition: color 0.3s; 
-}
-
-/* 1. Create the Underline Bar using ::after */
-nav a::after {
-    content: '';
-    /* Position the bar at the bottom center of the link */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    
-    /* Set the initial size and color of the bar */
-    width: 100%;
-    height: 1px; /* Adjust this to make the line thicker/thinner */
-    background-color: #9c0404; /* Uses your red hover color */
-    
-    /* Start the bar completely hidden (scaled down to zero width) */
-    transform: scaleX(0);
-    transform-origin: bottom center; /* Bar slides from center outward */
-    
-    /* Make the transition smooth and fast */
-    transition: transform 0.3s ease-out;
-}
-
-/* 2. Animate the bar and text color on hover */
-nav a:hover::after {
-    /* Scale the bar up to 100% width, making it visible */
-    transform: scaleX(1);
-}
-
-nav a:hover {
-    color: #9c0404; /* Keeps your desired link text color change */
-}
-/* --- END ANIMATION UPDATE --- */
-
-
-header {
-    text-align: center; /* THIS CENTERS ALL TEXT INSIDE THE HEADER */
-    margin-bottom: 40px; 
-}
-
-
-/* 5. CONTENT STYLING */
-h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #ffe8ca;
-}
-
-
-h1, h2, h3 { 
-    /* Force headers to use Cheboyga */
-    font-family: 'Cheboyga', 'Georgia', serif;
-    font-weight: normal; /* Prevents synthetic bolding */
-}
-
-
-/* --- LOGO STYLES (FIXED) --- */
 .logo-container {
     display: flex;
     justify-content: center; 
@@ -140,305 +60,160 @@ h1, h2, h3 {
 .main-logo {
     height: auto;
     display: block;
-    /* Responsive size: 95% of viewport width, capped at 1200px */
     width: min(95vw, 1200px); 
 }
 
-
-
-
-/* --- GALLERY GRID STYLES (3-Column Layout) --- */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px; 
-    margin-top: 50px;
+header {
+    text-align: center; 
+    margin-bottom: 40px; 
 }
 
-.gallery-item {
-    background-color: #000000; 
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #000000;
-    transition: background-color 0.3s;
-}
+/* -------------------------------------------------------------------------- */
+/* 4. NAVIGATION                                                              */
+/* -------------------------------------------------------------------------- */
 
-.gallery-item:hover {
-    background-color: #000000; 
-}
-
-.gallery-item a {
-    text-decoration: none;
-    color: inherit; 
-    display: block; 
-}
-
-.gallery-item img {
-    max-width: 100%;
-    height: auto;
+nav {
+    display: flex;
+    justify-content: center;
     margin-bottom: 10px;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #333; 
 }
 
-/* --- ABOUT PAGE STYLES (Flexbox Layout) --- */
-.about-content {
-    display: flex; 
-    gap: 40px; 
-    align-items: flex-start; 
-    margin-top: 50px;
+.hide-on-home {
+    display: none !important;
 }
 
-.profile-image {
-    flex-shrink: 0; 
-    width: 250px; 
-    border: 3px solid #000000;
-}
-
-.profile-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.profile-text {
-    flex-grow: 1; 
-}
-
-/* FOOTER */
-footer {
-    /* Enable flexbox for alignment */
-    display: flex;
-    justify-content: space-between; /* Pushes content to the far left and right */
-    align-items: center; /* Vertically centers items */
-    
-    margin-top: 80px;
-    padding-top: 20px;
-    padding-bottom: 20px; /* Added padding to the bottom */
-    border-top: 1px solid #333;
-    font-size: 0.8rem;
-    color: #000000;
-}
-
-/* --- FOOTER SOCIAL LINKS --- */
-.social-links {
-    display: flex;
-    gap: 15px; /* Spacing between icons */
-}
-
-.social-links a {
+nav a {
     text-decoration: none;
-    color: #aaaaaa; /* Default link color */
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #9c0404; /* Uses your red hover color */
-}
-
-/* Ensures icons are small and uniform */
-.social-icon {
-    width: 32px; /* Set a fixed width */
-    height: 32px; /* Set a fixed height */
-    display: block; /* Important for alignment */
-}
-
-/* --- FOOTER COPYRIGHT TEXT FIX --- */
-/* Target the text inside the new copyright-text div */
-.copyright-text p {
-    /* Set color to your preferred off-white or light gray */
     color: #ffe8ca; 
+    margin: 0 10px;
+    position: relative; 
+    transition: color 0.3s; 
 }
 
-
-/* --- ART DETAIL PAGE STYLES --- */
-.art-detail {
-    margin-top: 50px;
-}
-
-.art-image-container {
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 20px;
-    border: 1px solid #333; /* Frame around the image */
+    height: 1px;
+    background-color: #9c0404;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.3s ease-out;
 }
 
-.art-image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+nav a:hover::after { transform: scaleX(1); }
+nav a:hover { color: #9c0404; }
+
+/* -------------------------------------------------------------------------- */
+/* 5. WRITING & POETRY PAGES                                                  */
+/* -------------------------------------------------------------------------- */
+
+.text-content {
+    font-family: 'Georgia', serif;
+    color: #ffe8ca; 
+    max-width: 650px; 
+    margin: 40px auto; 
+    line-height: 1.8;
 }
 
-.art-info h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
+.text-content p {
+    margin-bottom: 1.5rem;
 }
 
-.art-info p {
-    margin-bottom: 15px;
-}
+/* -------------------------------------------------------------------------- */
+/* 6. GRIDS & GALLERIES                                                       */
+/* -------------------------------------------------------------------------- */
 
-
-/* --- LANDING PAGE GRID NAVIGATION --- */
-.landing-grid {
+.landing-grid, .gallery-grid {
     display: grid;
-    /* 3-column layout for desktop */
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.grid-nav-item {
+.grid-nav-item, .gallery-item {
     text-decoration: none;
     color: inherit;
     display: block;
-    background-color: #00000000;
-    border: 1px solid #00000000;
     padding: 15px;
     text-align: center;
     transition: background-color 0.3s;
 }
 
-.grid-nav-item:hover {
-    background-color: #000000;
+.grid-nav-item:hover, .gallery-item:hover {
+    background-color: #111;
 }
 
-.grid-nav-item img {
-    /* Ensures the image doesn't exceed its grid cell */
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    display: block;
+/* -------------------------------------------------------------------------- */
+/* 7. FOOTER & SOCIALS                                                        */
+/* -------------------------------------------------------------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 80px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
 }
 
-.grid-nav-item h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #ffe8ca;
-}
+.social-links { display: flex; gap: 15px; }
+.social-icon { width: 32px; height: 32px; display: block; }
+.copyright-text p { color: #ffe8ca; }
 
-
-/* --- RESPONSIVE MEDIA QUERIES --- */
-
-/* Tablet/Mid-size screens (Max-width 768px) */
-@media (max-width: 768px) {
-    /* General Gallery: Switch to 2 columns */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    /* Landing Grid: Switch to 2 columns */
-    .landing-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    /* About: Stack image and text */
-    .about-content {
-        flex-direction: column; 
-        gap: 20px;
-    }
-    .profile-image {
-        width: 60%;
-        margin: 0 auto;
-    }
-}
-
-
-/* Mobile/Small screens (Max-width 480px) */
-@media (max-width: 480px) {
-
-    /* LANDING GRID FIX: Set to 2 columns and tightens spacing */
-    .landing-grid {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 8px; /* Aggressive reduction in gap */
-    }
-
-    /* GENERAL GALLERY FIX: Ensures content pages are 2 columns */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 15px;
-    }
-
-    /* TIGHTEN PADDING on the individual navigation boxes */
-    .grid-nav-item {
-        padding: 10px 8px; /* Aggressive reduction in padding */
-    }
-    
-    /* CONTAINER FIX: Reduce overall page padding on small screens */
-    .container {
-        padding: 20px 10px; 
-    }
-    
-    .profile-image {
-        width: 100%; 
-    }
-    
-    /* NAV ALIGNMENT FIX (Replaced your 20px margin-left with 0 to start fresh) */
-    nav {
-        margin-left: 0; 
-    }
-}
+/* -------------------------------------------------------------------------- */
+/* 8. CLINICAL SCROLLING BANNER                                               */
+/* -------------------------------------------------------------------------- */
 
 .warning-banner {
     width: 100%;
-    background-color: #d7ff01; /* Your yellow */
+    background-color: #d7ff01; 
     color: #000;
     overflow: hidden;
     white-space: nowrap;
-    
-    /* CONTROL TALLNESS HERE */
-    padding: 2px 0;      /* Minimal vertical space */
-    font-size: 10px;     /* Smaller text for a thinner banner */
-    line-height: 1;      /* Keeps letters from adding extra height */
-    
-    font-family: sans-serif;
-    font-weight: 900;    /* Thick letters for readability at small sizes */
+    padding: 3px 0;      
+    font-size: 10px;      
+    line-height: 1;      
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 900;    
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 2px;
     border-bottom: 1px solid #000;
-
-    /* Pinstripe pattern */
-    background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(0, 0, 0, 0.07) 10px,
-        rgba(0, 0, 0, 0.07) 11px
-    );
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.07) 10px, rgba(0,0,0,0.07) 11px);
 }
 
 .marquee {
     display: inline-block;
-    white-space: nowrap;
-    /* This starts the animation defined below */
     animation: scroll-left 40s linear infinite; 
 }
 
 .marquee span {
     display: inline-block;
-    padding-right: 0; /* Ensures seamless transition */
+    padding-right: 80px; 
 }
 
-/* THE ANIMATION LOGIC */
 @keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* This moves exactly half the width of the total content 
-           (one full span) before snapping back to start */
-        transform: translateX(-50%);
-    }
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 
+/* -------------------------------------------------------------------------- */
+/* 9. RESPONSIVE QUERIES                                                      */
+/* -------------------------------------------------------------------------- */
 
-/* --- DROP CAP FOR STORY PAGES --- */
-.story-body p:first-of-type::first-letter {
-    font-size: 4rem;          /* Large size */
-    font-weight: 900;         /* Very bold */
-    float: left;              /* Wraps text around the letter */
-    line-height: 0.85;        /* Brings the second line of text up closer */
-    margin-top: 0.1em;        /* Adjusts vertical alignment */
-    margin-right: 0.15em;     /* Space between the letter and the words */
-    color: #fff;              /* Or use #d7ff01 for your brand yellow */
-    text-transform: uppercase;
-    font-family: 'Georgia', serif; /* A serif font looks more "book-like" */
+@media (max-width: 768px) {
+    .gallery-grid, .landing-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .landing-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .container { padding: 20px 10px; }
+    nav { font-size: 0.9rem; }
 }
