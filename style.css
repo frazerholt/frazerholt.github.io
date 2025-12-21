@@ -109,6 +109,17 @@ nav a::after {
 nav a:hover::after { transform: scaleX(1); }
 nav a:hover { color: #9c0404; }
 
+
+/* Ensure links stay the same color even after being clicked */
+nav a:visited, 
+.grid-nav-item:visited, 
+.gallery-item a:visited,
+footer a:visited {
+    color: inherit; 
+}
+
+
+
 /* -------------------------------------------------------------------------- */
 /* 5. WRITING & POETRY PAGES                                                  */
 /* -------------------------------------------------------------------------- */
@@ -216,4 +227,26 @@ footer {
     .landing-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .container { padding: 20px 10px; }
     nav { font-size: 0.9rem; }
+}
+
+/* --- PREVENT LINK COLOR/UNDERLINE CHANGES AFTER CLICKING --- */
+/* Targets all links in the grid, gallery, and footer */
+.grid-nav-item:visited, 
+.gallery-item a:visited,
+footer a:visited,
+.social-links a:visited {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+/* Specifically for the navigation to ensure color doesn't change */
+nav a:visited {
+    color: #ffe8ca;
+    text-decoration: none;
+}
+
+/* This ensures that even when active or focused, they don't get the default blue/purple underline */
+a:active, a:focus {
+    text-decoration: none;
+    outline: none;
 }
